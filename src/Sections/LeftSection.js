@@ -1,9 +1,13 @@
 import React from 'react'
+import LargeChatUsers from './../Components/LargeChatUsers'
+
 
 class LeftSection extends React.Component {
     render () {
         return (
-            <div>Left Section</div>
+            <div>
+                <LargeChatUsers />
+            </div>
         )
     }
 }
