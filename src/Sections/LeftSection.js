@@ -33,6 +33,7 @@ class LeftSection extends React.Component {
         let Items = this.state.users.map((user) => <LargeChatUserListItem key={user.id} profile_photo={user.profile_photo} full_name={user.name} date={user.date} desc={user.desc} />)
 
         return (
+
             <div>
                 <LargeChatUserList>
                     {Items}

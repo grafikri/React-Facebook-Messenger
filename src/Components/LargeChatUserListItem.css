@@ -1,33 +1,36 @@
-.User-Info{
+
+
+.Large-Chat-User-List-Item{
     display: flex;
     align-items: center;
     background: white;
+    cursor: pointer;
 }
 
-.User-Info .Avatar-Container{
+.Large-Chat-User-List-Item .Avatar-Container{
     margin-left: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.User-Info .Content{
+.Large-Chat-User-List-Item .Content{
     flex-grow: 1;
     margin-left: 15px;
     margin-right: 15px;
 }
 
-.User-Info .Content .TopContent{
+.Large-Chat-User-List-Item .Content .TopContent{
     display: flex;
 }
 
-.User-Info .Content .TopContent .Nickname{
+.Large-Chat-User-List-Item .Content .TopContent .Nickname{
     flex-grow: 1;
     flex-basis: 100%;
     font-size: 15px;
     font-weight: 400;
 }
 
-.User-Info .Content .TopContent .Date{
+.Large-Chat-User-List-Item .Content .TopContent .Date{
     flex-grow: 0;
     font-size: 13px;
     font-weight: 400;
@@ -35,11 +38,11 @@
 }
 
 
-.User-Info .Content .BottomContent{
+.Large-Chat-User-List-Item .Content .BottomContent{
     display: flex;
 }
 
-.User-Info .Content .BottomContent .Desc{
+.Large-Chat-User-List-Item .Content .BottomContent .Desc{
     flex-grow: 1;
     font-size: 13px;
     font-weight: 400;
