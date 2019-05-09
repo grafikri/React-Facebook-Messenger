@@ -1,0 +1,17 @@
+.chatPanel {
+    display: flex;
+    min-height: 100vh;
+}
+
+.leftPanel {
+    background: gray;
+    /* min-width: 240px;
+    max-width: 420px; */
+    flex-basis: 70%;
+}
+
+.rightPanel {
+    background: green;
+    flex-grow: 1;
+}
+
