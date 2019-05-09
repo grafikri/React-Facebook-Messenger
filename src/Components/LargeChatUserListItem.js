@@ -1,7 +1,6 @@
 import React from 'react'
 import Avatar from './Avatar'
 import './LargeChatUserListItem.css'
-import { tsImportEqualsDeclaration } from '@babel/types';
 
 class LargeChatUserListItem extends React.Component {
 
@@ -28,7 +27,9 @@ class LargeChatUserListItem extends React.Component {
 
         let style = {}
         style.background = this.state.bgActive ? "rgba(0, 0, 0, .05)" : "white"
-        
+
+        let configStyle = {}
+        if(!this.state.bgActive){ configStyle.display = "none" }
 
         return (
             <div style={style} className="Large-Chat-User-List-Item" onMouseEnter={this.handleOnMouseEnter} onMouseLeave={this.handleOnMouseLeave}>
@@ -48,7 +49,7 @@ class LargeChatUserListItem extends React.Component {
                         <div className="Desc">
                         {this.props.desc}
                         </div>
-                        <div className="Config">
+                        <div style={configStyle} className="Config">
                             ...
                         </div>
                     </div>
