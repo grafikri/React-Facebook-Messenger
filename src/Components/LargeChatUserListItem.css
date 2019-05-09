@@ -1,0 +1,47 @@
+.User-Info{
+    display: flex;
+    align-items: center;
+    background: white;
+}
+
+.User-Info .Avatar-Container{
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.User-Info .Content{
+    flex-grow: 1;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.User-Info .Content .TopContent{
+    display: flex;
+}
+
+.User-Info .Content .TopContent .Nickname{
+    flex-grow: 1;
+    flex-basis: 100%;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.User-Info .Content .TopContent .Date{
+    flex-grow: 0;
+    font-size: 13px;
+    font-weight: 400;
+    color: #0006;
+}
+
+
+.User-Info .Content .BottomContent{
+    display: flex;
+}
+
+.User-Info .Content .BottomContent .Desc{
+    flex-grow: 1;
+    font-size: 13px;
+    font-weight: 400;
+    color: #999;
+}

@@ -1,22 +1,44 @@
 import React from 'react'
 import Avatar from './Avatar'
 
-import './LargeChatUsers.css'
+import './LargeChatUserList.css'
 
 
 
-class LargeChatUsers extends React.Component {
+class LargeChatUserList extends React.Component {
+    constructor(props){
+        super(props)
+
+        const url = "https://scontent.fbtz1-4.fna.fbcdn.net/v/t1.0-1/p50x50/50407326_10155788003077096_2720396654237712384_n.jpg?_nc_cat=102&_nc_ht=scontent.fbtz1-4.fna&oh=1694c63353dbcc17838d112453b24b96&oe=5D62ACFF"
+
+        this.state = {
+            users:[
+                {
+                    name: "Merve",
+                    profile_photo: url,
+                    date: "01.01.01",
+                    desc: "Güzel bir mesaj metni"
+                },
+                {
+                    name: "Merve",
+                    profile_photo: url,
+                    date: "01.01.01",
+                    desc: "Güzel bir mesaj metni"
+                }
+            ]
+        }
+    }
+
     render () {
 
-        let url = "https://scontent.fbtz1-4.fna.fbcdn.net/v/t1.0-1/p50x50/50407326_10155788003077096_2720396654237712384_n.jpg?_nc_cat=102&_nc_ht=scontent.fbtz1-4.fna&oh=1694c63353dbcc17838d112453b24b96&oe=5D62ACFF"
+        
 
         return (
             <div className="Large-Chat-Users">
-                <ul>
-                    <li>
-                        <div className="User-Info">
+                
+                <div className="User-Info">
                             <div className="Avatar-Container">
-                                <Avatar type="circle" url={url} />
+                                <Avatar type="circle" url="1" />
                             </div>
                             <div className="Content">
                                 <div className="TopContent">
@@ -37,11 +59,12 @@ class LargeChatUsers extends React.Component {
                                 </div>
                             </div>
                         </div>
-                    </li>
-                </ul>
+                        
+
             </div>
+            
         )
     }
 }
 
-export default LargeChatUsers
+export default LargeChatUserList

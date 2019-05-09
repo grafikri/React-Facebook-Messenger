@@ -13,7 +13,7 @@ class Avatar extends React.Component {
             style.height = this.props.height
         }
 
-        if(this.props.type == "circle") {
+        if(this.props.type === "circle") {
             style.borderRadius = "50%";
         }
         
