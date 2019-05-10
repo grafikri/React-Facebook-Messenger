@@ -1,0 +1,19 @@
+.PhoneBookUserListItem{
+    display: flex;
+    align-items: center;
+    background: white;
+    cursor: pointer;
+}
+
+.PhoneBookUserListItem > .Avatar-Container{
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.PhoneBookUserListItem > .Content{
+    flex-grow: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+}
