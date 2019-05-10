@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import './PhoneBookUserSearchBox.css'
 
@@ -16,10 +17,12 @@ class PhoneBookUserSearchBox extends React.Component {
     }
 
     handleOnFocus () {
+        this.props.onFocus()
         this.setState({ focusActive: true })
     }
     
     handleOnBlur () {
+        this.props.onBlur()
         this.setState({ focusActive: false })
     }
 
@@ -36,6 +39,11 @@ class PhoneBookUserSearchBox extends React.Component {
             </div>
         )
     }
+}
+
+PhoneBookUserSearchBox.propTypes = {
+    onFocus: PropTypes.func.isRequired,
+    onBlur: PropTypes.func.isRequired
 }
 
 export default PhoneBookUserSearchBox
