@@ -1,13 +1,14 @@
 import React from 'react'
 import LargeChatUserList from './../Components/LargeChatUserList'
 import LargeChatUserListItem from './../Components/LargeChatUserListItem'
+import PhoneBookUserSeachBox from './../Components/PhoneBookUserSearchBox'
 
 
 class LeftSection extends React.Component {
     constructor(props){
         super(props)
 
-        const url = "https://scontent.fbtz1-4.fna.fbcdn.net/v/t1.0-1/p50x50/50407326_10155788003077096_2720396654237712384_n.jpg?_nc_cat=102&_nc_ht=scontent.fbtz1-4.fna&oh=1694c63353dbcc17838d112453b24b96&oe=5D62ACFF"
+        const url = "https://scontent.fbtz1-7.fna.fbcdn.net/v/t1.0-1/p50x50/12009718_10206742983546542_3561135144944328858_n.jpg?_nc_cat=104&_nc_ht=scontent.fbtz1-7.fna&oh=c1223a84fe0a6be2a7ddb911e422b9b6&oe=5D5BC97D"
 
         this.state = {
             users:[
@@ -35,6 +36,7 @@ class LeftSection extends React.Component {
         return (
 
             <div>
+                <PhoneBookUserSeachBox />
                 <LargeChatUserList>
                     {Items}
                 </LargeChatUserList>
