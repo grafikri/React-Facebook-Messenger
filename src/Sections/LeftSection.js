@@ -4,8 +4,9 @@ import LargeChatUserListItem from './../Components/LargeChatUserListItem'
 
 import PhoneBookUserList from './../Components/PhoneBookUserList'
 import PhoneBookUserListItem from './../Components/PhoneBookUserListItem'
-
 import PhoneBookUserSeachBox from './../Components/PhoneBookUserSearchBox'
+
+import { connect } from 'react-redux'
 
 
 class LeftSection extends React.Component {
@@ -33,6 +34,11 @@ class LeftSection extends React.Component {
                 }
             ]
         }
+    }
+
+
+    componentDidMount() {
+        console.log("merhaba: ", this.props)
     }
     
     render () {
@@ -65,4 +71,15 @@ class LeftSection extends React.Component {
     }
 }
 
-export default LeftSection
+
+
+
+const mapStateToProps = state => {
+
+    console.log("local state: ", state)
+    return state
+}
+
+
+
+export default connect(mapStateToProps)(LeftSection)
