@@ -2,6 +2,7 @@ import React from 'react'
 import LargeChatUserList from './../Components/LargeChatUserList'
 import LargeChatUserListItem from './../Components/LargeChatUserListItem'
 
+import TinyChatUserList from './../Components/TinyChatUserList'
 import TinyChatUserListItem from './../Components/TinyChatUserListItem'
 
 import PhoneBookUserList from './../Components/PhoneBookUserList'
@@ -42,7 +43,9 @@ class LeftSection extends React.Component {
             <div>
                 <PhoneBookUserSeachBox onFocus={this.handleOnFocus} onBlur={this.handleOnBlur} />
 
-                <TinyChatUserListItem title="Merve Coşkun" photo="https://fakeimg.pl/200x200/?text=Photo&font=lobster%22" />
+                <TinyChatUserList>
+                    { this.props.users.map((user) => <TinyChatUserListItem key={user.id} title={user.name} photo={user.profile_photo} />) }
+                </TinyChatUserList>
 
                 <div style={{ display: this.state.searchActive ? "none" : "none" }}>
                     <PhoneBookUserList>

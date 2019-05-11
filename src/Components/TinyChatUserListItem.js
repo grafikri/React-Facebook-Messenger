@@ -37,6 +37,12 @@ class TinyChatUserListItem extends React.Component {
             <div style={style} className="Tiny-Chat-User-List-Item" onMouseEnter={this.handleOnMouseEnter} onMouseLeave={this.handleOnMouseLeave}>
                 <div className="Avatar-Container">
                     <Avatar type="circle" url={this.props.photo} />
+
+                    <div style={configStyle} className="Tooltip-Container">
+                        <div className="Tooltip">
+                            {this.props.title}
+                        </div>
+                    </div>
                 </div>
             </div>
             

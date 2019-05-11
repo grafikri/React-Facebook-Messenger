@@ -7,21 +7,21 @@ const initialState = {
     {
         id: "1",
         name: "Merve",
-        profile_photo: url,
+        profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
         date: "01.01.01",
         desc: "Güzel bir mesaj metni"
     },
     {
         id: "2",
         name: "Merve",
-        profile_photo: url,
+        profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
         date: "02.02.02",
         desc: "Harika bir Dünya"
     },
     {
       id: "3",
       name: "Merve",
-      profile_photo: url,
+      profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
       date: "02.02.02",
       desc: "Harika bir Dünya"
   }

@@ -6,6 +6,28 @@
 }
 
 .Tiny-Chat-User-List-Item .Avatar-Container{
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 13px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    position: relative;
+}
+
+.Tiny-Chat-User-List-Item .Tooltip-Container{
+    
+    position: absolute;
+    width: 0;
+    right: 5px;
+    top: 0;
+    bottom: 26px;
+    height: 0;
+    margin: auto;
+    font-size: 12px;
+}
+
+.Tiny-Chat-User-List-Item .Tooltip{
+    background: #333;
+    color: white;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 4px;
 }
