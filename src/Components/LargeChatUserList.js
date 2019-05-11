@@ -5,15 +5,15 @@ import './LargeChatUserList.css'
 
 
 class LargeChatUserList extends React.Component {
-    render () {
+  render() {
 
-        return (
-            <div>
-                {this.props.children}
-            </div>
-            
-        )
-    }
+    return (
+      <div>
+        {this.props.children}
+      </div>
+
+    )
+  }
 }
 
 export default LargeChatUserList

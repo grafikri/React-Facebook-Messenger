@@ -13,9 +13,9 @@ import { connect } from 'react-redux'
 
 
 class LeftSection extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props)
-        
+
         this.handleOnFocus = this.handleOnFocus.bind(this)
         this.handleOnBlur = this.handleOnBlur.bind(this)
 
@@ -24,37 +24,37 @@ class LeftSection extends React.Component {
         }
     }
 
-    handleOnFocus(){
+    handleOnFocus() {
         this.setState({ searchActive: true })
     }
 
-    handleOnBlur(){
+    handleOnBlur() {
         this.setState({ searchActive: false })
     }
 
     componentDidMount() {
-        
+
         console.log("componentDidMount: ", this.props)
     }
-    
-    render () {
+
+    render() {
 
         return (
             <div>
                 <PhoneBookUserSeachBox onFocus={this.handleOnFocus} onBlur={this.handleOnBlur} />
 
                 <TinyChatUserList>
-                    { this.props.users.map((user) => <TinyChatUserListItem key={user.id} title={user.name} photo={user.profile_photo} />) }
+                    {this.props.users.map((user) => <TinyChatUserListItem key={user.id} title={user.name} photo={user.profile_photo} />)}
                 </TinyChatUserList>
 
                 <div style={{ display: this.state.searchActive ? "none" : "none" }}>
                     <PhoneBookUserList>
-                        { this.props.users.map((user) => <PhoneBookUserListItem key={user.id} profile_photo={user.profile_photo} full_name={user.name} />) }
+                        {this.props.users.map((user) => <PhoneBookUserListItem key={user.id} profile_photo={user.profile_photo} full_name={user.name} />)}
                     </PhoneBookUserList>
                 </div>
                 <div style={{ display: this.state.searchActive ? "none" : "none" }}>
                     <LargeChatUserList>
-                        { this.props.users.map((user) => <LargeChatUserListItem key={user.id} profile_photo={user.profile_photo} full_name={user.name} date={user.date} desc={user.desc} />) }
+                        {this.props.users.map((user) => <LargeChatUserListItem key={user.id} profile_photo={user.profile_photo} full_name={user.name} date={user.date} desc={user.desc} />)}
                     </LargeChatUserList>
                 </div>
             </div>
@@ -67,7 +67,7 @@ class LeftSection extends React.Component {
 
 
 const mapStateToProps = state => {
-    return { searchActive: state.openClose.phoneBookUserSearchActive, users: state.chatUsers.users } 
+    return { searchActive: state.openClose.phoneBookUserSearchActive, users: state.chatUsers.users }
 }
 
 

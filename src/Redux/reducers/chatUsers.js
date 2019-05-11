@@ -3,20 +3,20 @@
 const url = "https://scontent.fbtz1-9.fna.fbcdn.net/v/t1.0-1/p50x50/20294440_1525787717477862_8224313811065746462_n.png?_nc_cat=108&_nc_ht=scontent.fbtz1-9.fna&oh=6750520514c008c9b1e22934108e6e2f&oe=5D5D82DD"
 
 const initialState = {
-  users:[
+  users: [
     {
-        id: "1",
-        name: "Merve",
-        profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
-        date: "01.01.01",
-        desc: "Güzel bir mesaj metni"
+      id: "1",
+      name: "Merve",
+      profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
+      date: "01.01.01",
+      desc: "Güzel bir mesaj metni"
     },
     {
-        id: "2",
-        name: "Merve",
-        profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
-        date: "02.02.02",
-        desc: "Harika bir Dünya"
+      id: "2",
+      name: "Merve",
+      profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
+      date: "02.02.02",
+      desc: "Harika bir Dünya"
     },
     {
       id: "3",
@@ -24,10 +24,80 @@ const initialState = {
       profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
       date: "02.02.02",
       desc: "Harika bir Dünya"
-  }
+    },
+    {
+      id: "3",
+      name: "Merve",
+      profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
+      date: "02.02.02",
+      desc: "Harika bir Dünya"
+    },
+    {
+      id: "4",
+      name: "Merve",
+      profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
+      date: "02.02.02",
+      desc: "Harika bir Dünya"
+    },
+    {
+      id: "5",
+      name: "Merve",
+      profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
+      date: "02.02.02",
+      desc: "Harika bir Dünya"
+    },
+    {
+      id: "6",
+      name: "Merve",
+      profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
+      date: "02.02.02",
+      desc: "Harika bir Dünya"
+    },
+    {
+      id: "7",
+      name: "Merve",
+      profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
+      date: "02.02.02",
+      desc: "Harika bir Dünya"
+    },
+    {
+      id: "8",
+      name: "Merve",
+      profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
+      date: "02.02.02",
+      desc: "Harika bir Dünya"
+    },
+    {
+      id: "9",
+      name: "Merve",
+      profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
+      date: "02.02.02",
+      desc: "Harika bir Dünya"
+    },
+    {
+      id: "10",
+      name: "Merve",
+      profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
+      date: "02.02.02",
+      desc: "Harika bir Dünya"
+    },
+    {
+      id: "11",
+      name: "Merve",
+      profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
+      date: "02.02.02",
+      desc: "Harika bir Dünya"
+    },
+    {
+      id: "12",
+      name: "Merve",
+      profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
+      date: "02.02.02",
+      desc: "Harika bir Dünya"
+    },
   ]
 }
 
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
   return state
 }
