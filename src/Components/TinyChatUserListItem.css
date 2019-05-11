@@ -1,0 +1,11 @@
+.Tiny-Chat-User-List-Item{
+    display: flex;
+    justify-content: center;
+    background: white;
+    cursor: pointer;
+}
+
+.Tiny-Chat-User-List-Item .Avatar-Container{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}

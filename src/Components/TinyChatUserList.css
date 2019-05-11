@@ -1,0 +1,49 @@
+.Tiny-Chat-User-List{
+    display: flex;
+    align-items: center;
+    background: white;
+    cursor: pointer;
+}
+
+.Tiny-Chat-User-List .Avatar-Container{
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Tiny-Chat-User-List .Content{
+    flex-grow: 1;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.Tiny-Chat-User-List .Content .TopContent{
+    display: flex;
+}
+
+.Tiny-Chat-User-List .Content .TopContent .Nickname{
+    flex-grow: 1;
+    flex-basis: 100%;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.Tiny-Chat-User-List .Content .TopContent .Date{
+    flex-grow: 0;
+    font-size: 13px;
+    font-weight: 400;
+    color: #0006;
+}
+
+
+.Tiny-Chat-User-List .Content .BottomContent{
+    display: flex;
+}
+
+.Tiny-Chat-User-List .Content .BottomContent .Desc{
+    flex-grow: 1;
+    font-size: 13px;
+    font-weight: 400;
+    color: #999;
+    line-height: 1.5;
+}
