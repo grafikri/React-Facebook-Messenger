@@ -1,6 +1,7 @@
 .PhoneBookUserSearchBox{
     /* background: red; */
     padding: 10px;
+    position: relative;
 }
 
 .PhoneBookUserSearchBox > input{

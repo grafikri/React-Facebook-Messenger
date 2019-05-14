@@ -9,6 +9,7 @@ import TinyChatUserListItem from './../Components/TinyChatUserListItem'
 import PhoneBookUserList from './../Components/PhoneBookUserList'
 import PhoneBookUserListItem from './../Components/PhoneBookUserListItem'
 import PhoneBookUserSeachBox from './../Components/PhoneBookUserSearchBox'
+import Header from './../Components/Header'
 
 import { connect } from 'react-redux'
 
@@ -42,6 +43,11 @@ class LeftSection extends React.Component {
 
     return (
       <div className="Left-Section">
+
+        <div>
+          <Header />
+        </div>
+
         <div className="Search-Input">
           <PhoneBookUserSeachBox onFocus={this.handleOnFocus} onBlur={this.handleOnBlur} />
         </div>

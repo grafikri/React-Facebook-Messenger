@@ -1,0 +1,21 @@
+
+
+.Header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+}
+
+.Header > div{
+  flex-grow: 1;
+}
+
+.Header > .Titles{
+  text-align: center;
+}
+
+.Header > .Right-Icons{
+  text-align: right;
+}
