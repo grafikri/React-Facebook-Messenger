@@ -1,8 +1,13 @@
 This project is copy of facebook messenger. It's created with React, Redux, React Router and SASS.
 
-You can run;
-### `npm install`
-### `npm start`
+
+### install and running
+```
+$ git clone https://github.com/grafikri/React-Facebook-Messenger.git
+$ cd React-Facebook-Messenger/
+$ npm install
+$ npm start # serve at localhost:8080
+```
 
 ## To do
 - Right panel
