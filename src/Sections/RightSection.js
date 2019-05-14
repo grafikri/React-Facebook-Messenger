@@ -1,4 +1,5 @@
 import React from 'react'
+import './RightSection.css'
 import { ArrowIcon, GearIcon } from '../Components/Icons'
 import { Header, ReactiveTitle } from './../Components'
 
@@ -6,10 +7,11 @@ import { Header, ReactiveTitle } from './../Components'
 class RightSection extends React.Component {
   render() {
     return (
-      <div>
+      <div className="Right-Section">
 
-
-        <Header title="Tony Stark" subTitle="3 dakika önce aktifti" rightIcons={[<GearIcon />, <GearIcon />, <GearIcon />]} />
+        <div className="Header-Container">
+          <Header title="Tony Stark" subTitle="3 dakika önce aktifti" rightIcons={[<GearIcon />, <GearIcon />, <GearIcon />]} />
+        </div>
 
         <ReactiveTitle />
 
