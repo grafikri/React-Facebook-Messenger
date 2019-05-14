@@ -19,3 +19,8 @@
 .Header > .Right-Icons{
   text-align: right;
 }
+
+.Header .Icon-Container{
+  padding:10px;
+  display: inline-block;
+}

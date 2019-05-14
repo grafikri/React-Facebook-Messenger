@@ -1,0 +1,13 @@
+
+
+.Base-Icon {
+  background: url('https://static.xx.fbcdn.net/rsrc.php/v3/yp/r/Ti0mO6SiXce.png');
+  background-repeat: none;
+  background-size: auto;
+  height:32px;
+  width: 32px;
+  min-width: 32px;
+  display: inline-block;
+
+  /* background-position: 0 -633px; */
+}

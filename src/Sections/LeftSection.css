@@ -14,6 +14,21 @@
   .Left-Section > .Tiny-User-List{
     display: block;
   }
+
+  .Left-Section > .Phone-Book-User{
+    display: none;
+  }
+
+  .Left-Section > .Large-Chat-User{
+    display: none !important;
+  }
+
+  .Left-Section > .Left-Section-Header{
+    display: none;
+  }
+
+  
+  
   
 }
 

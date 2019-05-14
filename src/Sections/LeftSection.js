@@ -44,8 +44,8 @@ class LeftSection extends React.Component {
     return (
       <div className="Left-Section">
 
-        <div>
-          <Header />
+        <div className="Left-Section-Header">
+
         </div>
 
         <div className="Search-Input">
@@ -58,12 +58,12 @@ class LeftSection extends React.Component {
           </TinyChatUserList>
         </div>
 
-        <div style={{ display: this.state.searchActive ? "block" : "none" }}>
+        <div className="Phone-Book-User" style={{ display: this.state.searchActive ? "block" : "none" }}>
           <PhoneBookUserList>
             {this.props.users.map((user) => <PhoneBookUserListItem key={user.id} profile_photo={user.profile_photo} full_name={user.name} />)}
           </PhoneBookUserList>
         </div>
-        <div style={{ display: this.state.searchActive ? "none" : "block" }}>
+        <div className="Large-Chat-User" style={{ display: this.state.searchActive ? "none" : "block" }}>
           <LargeChatUserList>
             {this.props.users.map((user) => <LargeChatUserListItem key={user.id} profile_photo={user.profile_photo} full_name={user.name} date={user.date} desc={user.desc} />)}
           </LargeChatUserList>
