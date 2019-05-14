@@ -1,0 +1,24 @@
+
+
+.Left-Section {
+  
+}
+
+.Left-Section > .Tiny-User-List {
+  display: none;
+}
+
+
+@media (max-width: 640px) {
+  .Left-Section > .Search-Input{
+    display: none;
+  }
+
+  .Left-Section > .Tiny-User-List{
+    display: block;
+  }
+  
+}
+
+
+

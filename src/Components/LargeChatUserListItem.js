@@ -35,7 +35,7 @@ class LargeChatUserListItem extends React.Component {
     return (
       <div style={style} className="Large-Chat-User-List-Item" onMouseEnter={this.handleOnMouseEnter} onMouseLeave={this.handleOnMouseLeave}>
         <div className="Avatar-Container">
-          <Avatar type="circle" url={this.props.profile_photo} />
+          <Avatar width="48px" type="circle" url={this.props.profile_photo} />
         </div>
         <div className="Content">
           <div className="TopContent">
