@@ -2,6 +2,7 @@ import './Header.css'
 
 import React from 'react'
 import _ from 'lodash'
+import PropTypes from 'prop-types'
 
 
 class Header extends React.Component {
@@ -12,10 +13,16 @@ class Header extends React.Component {
 
   render() {
 
+    let leftIcons = _.isArray(this.props.leftIcons) ? this.props.leftIcons.map((icon, index) => (<span className="Icon-Container" key={index}>{icon}</span>)) : []
 
-    let leftIcons = _.isArray(this.props.LeftIcons) ? this.props.LeftIcons.map((icon, index) => (<span className="Icon-Container" key={index}>{icon}</span>)) : []
+    let rightIcons = _.isArray(this.props.rightIcons) ? this.props.rightIcons.map((icon, index) => (<span className="Icon-Container" key={index}>{icon}</span>)) : []
 
-    let rightIcons = _.isArray(this.props.RightIcons) ? this.props.RightIcons.map((icon, index) => (<span className="Icon-Container" key={index}>{icon}</span>)) : []
+    let title = <h1 className="Big-Title">{this.props.title}</h1>
+
+    let titleAndSubtitle = <div className="Mini-Title">
+      <h2 className="Top-Title">{this.props.title}</h2>
+      <h2 className="Bottom-Title">{this.props.subTitle}</h2>
+    </div>
 
     return (
       <div className="Header">
@@ -23,12 +30,7 @@ class Header extends React.Component {
           {leftIcons}
         </div>
         <div className="Titles">
-          <div className="Title">
-            Title
-          </div>
-          <div className="Sub-Title">
-            Subtitle
-          </div>
+          {!_.isEmpty(this.props.title) && !_.isEmpty(this.props.subTitle) ? titleAndSubtitle : title}
         </div>
         <div className="Right-Icons">
           {rightIcons}
@@ -36,6 +38,18 @@ class Header extends React.Component {
       </div>
     )
   }
+}
+
+Header.defaultProps = {
+  title: "",
+  subTitle: "",
+}
+
+Header.propTypes = {
+  leftIcons: PropTypes.array,
+  rightIcons: PropTypes.array,
+  title: PropTypes.string,
+  subTitle: PropTypes.string,
 }
 
 

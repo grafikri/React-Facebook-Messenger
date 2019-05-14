@@ -1,21 +1,17 @@
 import React from 'react'
-
-import Header from './../Components/Header'
 import { WriteIcon, GearIcon } from '../Components/Icons'
+import Header from './../Components/Header'
 
-class LeftSection extends React.Component {
+
+class RightSection extends React.Component {
   render() {
     return (
       <div>
-        {/* Right Section */}
-        <div>
-
-          <Header LeftIcons={[<WriteIcon />, <GearIcon />]} RightIcons={[<GearIcon />]} />
-
-        </div>
+        <Header title="Tony Stark" subTitle="3 dakika önce aktifti" rightIcons={[<GearIcon />, <GearIcon />, <GearIcon />]} />
+        Right Section
       </div>
     )
   }
 }
 
-export default LeftSection
+export default RightSection

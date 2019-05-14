@@ -1,5 +1,6 @@
 import React from 'react'
 import './LeftSection.css'
+import { WriteIcon, GearIcon } from '../Components/Icons'
 import LargeChatUserList from './../Components/LargeChatUserList'
 import LargeChatUserListItem from './../Components/LargeChatUserListItem'
 
@@ -10,6 +11,7 @@ import PhoneBookUserList from './../Components/PhoneBookUserList'
 import PhoneBookUserListItem from './../Components/PhoneBookUserListItem'
 import PhoneBookUserSeachBox from './../Components/PhoneBookUserSearchBox'
 import Header from './../Components/Header'
+
 
 import { connect } from 'react-redux'
 
@@ -36,7 +38,6 @@ class LeftSection extends React.Component {
 
   componentDidMount() {
 
-    console.log("componentDidMount: ", this.props)
   }
 
   render() {
@@ -45,7 +46,7 @@ class LeftSection extends React.Component {
       <div className="Left-Section">
 
         <div className="Left-Section-Header">
-
+          <Header title="Messenger" leftIcons={[<GearIcon />]} rightIcons={[<WriteIcon />]} />
         </div>
 
         <div className="Search-Input">

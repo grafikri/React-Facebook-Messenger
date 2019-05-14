@@ -10,17 +10,37 @@
 
 .Header > div{
   flex-grow: 1;
+  flex-basis: 0;
 }
 
 .Header > .Titles{
   text-align: center;
 }
 
+.Header > .Titles > .Big-Title{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.Header > .Titles > .Mini-Title > .Top-Title{
+  font-size: 14px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.Header > .Titles > .Mini-Title > .Bottom-Title{
+  font-size: 12px;
+  margin: 0;
+  font-weight: 400;
+  color: gray;
+}
+
+
 .Header > .Right-Icons{
   text-align: right;
 }
 
 .Header .Icon-Container{
-  padding:10px;
+  padding:5px;
   display: inline-block;
 }

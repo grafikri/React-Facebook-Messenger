@@ -6,17 +6,17 @@ const initialState = {
   users: [
     {
       id: "1",
-      name: "Merve",
+      name: "Tony Stary",
       profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
       date: "01.01.01",
-      desc: "Güzel bir mesaj metni"
+      desc: "Message"
     },
     {
       id: "2",
-      name: "Merve",
+      name: "Hulk",
       profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
       date: "02.02.02",
-      desc: "Harika bir Dünya"
+      desc: "Message"
     }
   ]
 }
