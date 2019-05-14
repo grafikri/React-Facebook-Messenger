@@ -6,54 +6,54 @@ import './TinyChatUserListItem.css'
 
 class TinyChatUserListItem extends React.Component {
 
-    constructor(props){
-        super(props)
-        this.state = {
-            bgActive: false
-        }
-
-        this.handleOnMouseEnter = this.handleOnMouseEnter.bind(this)
-        this.handleOnMouseLeave = this.handleOnMouseLeave.bind(this)
-        
+  constructor(props) {
+    super(props)
+    this.state = {
+      bgActive: false
     }
 
-    handleOnMouseEnter(){
-        this.setState({ bgActive: true})
-    }
+    this.handleOnMouseEnter = this.handleOnMouseEnter.bind(this)
+    this.handleOnMouseLeave = this.handleOnMouseLeave.bind(this)
 
-    handleOnMouseLeave(){
-        this.setState({ bgActive: false})
-    }
+  }
 
-    render () {
+  handleOnMouseEnter() {
+    this.setState({ bgActive: true })
+  }
 
-        let style = {}
-        style.background = this.state.bgActive ? "rgba(0, 0, 0, .05)" : "white"
+  handleOnMouseLeave() {
+    this.setState({ bgActive: false })
+  }
 
-        let configStyle = {}
-        if(!this.state.bgActive){ configStyle.display = "none" }
+  render() {
 
-        return (
-            <div style={style} className="Tiny-Chat-User-List-Item" onMouseEnter={this.handleOnMouseEnter} onMouseLeave={this.handleOnMouseLeave}>
-                <div className="Avatar-Container">
-                    <Avatar type="circle" url={this.props.photo} />
+    let style = {}
+    style.background = this.state.bgActive ? "rgba(0, 0, 0, .05)" : "white"
 
-                    <div style={configStyle} className="Tooltip-Container">
-                        <div className="Tooltip">
-                            {this.props.title}
-                        </div>
-                    </div>
-                </div>
+    let configStyle = {}
+    if (!this.state.bgActive) { configStyle.display = "none" }
+
+    return (
+      <div style={style} className="Tiny-Chat-User-List-Item" onMouseEnter={this.handleOnMouseEnter} onMouseLeave={this.handleOnMouseLeave}>
+        <div className="Avatar-Container">
+          <Avatar type="circle" url={this.props.photo} />
+
+          <div style={configStyle} className="Tooltip-Container">
+            <div className="Tooltip">
+              {this.props.title}
             </div>
-            
-        )
-    }
+          </div>
+        </div>
+      </div>
+
+    )
+  }
 }
 
 
 TinyChatUserListItem.propTypes = {
-    title: PropTypes.string.isRequired,
-    photo: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  photo: PropTypes.string.isRequired
 }
 
 

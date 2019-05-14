@@ -1,0 +1,24 @@
+
+
+
+.Reactive-Title{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  background: red;
+}
+
+.Reactive-Title > .Title{
+  flex-grow: 1;
+}
+
+.Reactive-Title > .Title > h4{
+  font-weight: 400;
+  margin: 0;
+}
+
+.Reactive-Title > .Icon{
+  flex-grow: 1;
+  text-align: right  
+}
