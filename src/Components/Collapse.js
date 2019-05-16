@@ -50,7 +50,7 @@ class Collapse extends React.Component {
       <div className="Collapse" onClick={this.handleOnclick}>
         <div style={style} className="Collapse-Header" onMouseLeave={this.handleMouseLeave} onMouseEnter={this.handleMouseEnter}>
           <div className="Title">
-            <h4>Seçenekler</h4>
+            <h4>{this.props.title}</h4>
           </div>
           <div className="Icon">
             <span style={rotateStyle}>

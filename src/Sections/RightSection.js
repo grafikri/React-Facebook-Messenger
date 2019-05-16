@@ -14,7 +14,7 @@ class RightSection extends React.Component {
         </div>
 
         {/* Right Section */}
-        <Collapse>
+        <Collapse title="Seçenekler">
           <CollapseItem icon={<GearIcon />} title="Konusmada Ara" />
           <CollapseItem icon={<InfoIcon />} title="Takma adları düzenle" />
           <CollapseItem icon={<WriteIcon />} title="Rengi değiştir" />
