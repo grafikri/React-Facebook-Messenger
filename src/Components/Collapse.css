@@ -1,0 +1,27 @@
+
+
+
+.Collapse > .Collapse-Header{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.Collapse > .Collapse-Body{
+  padding: 10px;
+}
+
+.Collapse > .Collapse-Header > .Title{
+  flex-grow: 1;
+}
+
+.Collapse > .Collapse-Header >.Title > h4{
+  font-weight: 400;
+  margin: 0;
+}
+
+.Collapse > .Collapse-Header >.Icon{
+  flex-grow: 1;
+  text-align: right  
+}

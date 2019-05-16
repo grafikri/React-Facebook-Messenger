@@ -1,0 +1,20 @@
+
+
+.Collapse-Item{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.Collapse-Item > .Icon{
+    flex-grow: 0;
+    line-height: 0;
+}
+
+.Collapse-Item > .Title{
+    flex-grow: 1;
+    margin-left: 10px;
+}
+

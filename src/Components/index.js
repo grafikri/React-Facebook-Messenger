@@ -1,6 +1,7 @@
-import ReactiveTitle from './ReactiveTitle'
+import Collapse from './Collapse'
+import CollapseItem from './CollapseItem'
 import Header from './Header'
 
-export { ReactiveTitle, Header }
+export { Collapse, Header, CollapseItem }
 
 

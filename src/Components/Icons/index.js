@@ -13,3 +13,12 @@ export const GearIcon = () => {
 export const ArrowIcon = () => {
   return <TinyBaseIcon xPos={0} yPos={-1020} />
 }
+
+export const PlusIcon = () => {
+  return <BaseIcon xPos={-99} yPos={-601} />
+}
+
+export const InfoIcon = () => {
+  return <BaseIcon xPos={-66} yPos={-633} />
+}
+
