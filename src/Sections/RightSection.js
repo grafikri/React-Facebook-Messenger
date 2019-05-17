@@ -13,19 +13,29 @@ class RightSection extends React.Component {
           <Header title="Tony Stark" subTitle="3 dakika önce aktifti" rightIcons={[<GearIcon />, <GearIcon />, <GearIcon />]} />
         </div>
 
+        <div className="Content-Area">
+          <div className="Chat-Area">
+            Chat
+          </div>
+          <div className="User-Information-Area">
+
+            <Collapse title="Seçenekler">
+              <ListItem icon={<GearIcon />} title="Konusmada Ara" />
+              <ListItem icon={<InfoIcon />} title="Takma adları düzenle" />
+              <ListItem icon={<WriteIcon />} title="Rengi değiştir" />
+              <ListItem icon={<PlusIcon />} title="İfade simgesini değiştir" />
+            </Collapse>
+
+            <Collapse title="Galeri">
+              <PhotoGallery />
+            </Collapse>
+
+          </div>
+        </div>
+
         {/* <PhotoGallery /> */}
 
-        {/* Right Section */}
-        <Collapse title="Seçenekler">
-          <ListItem icon={<GearIcon />} title="Konusmada Ara" />
-          <ListItem icon={<InfoIcon />} title="Takma adları düzenle" />
-          <ListItem icon={<WriteIcon />} title="Rengi değiştir" />
-          <ListItem icon={<PlusIcon />} title="İfade simgesini değiştir" />
-        </Collapse>
 
-        <Collapse title="Galeri">
-          <PhotoGallery />
-        </Collapse>
 
       </div>
     )
