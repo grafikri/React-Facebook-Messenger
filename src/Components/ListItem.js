@@ -1,15 +1,12 @@
-import './CollapseItem.css'
+import './ListItem.css'
 import React from 'react'
 
-class CollapseItem extends React.Component {
+class ListItem extends React.Component {
 
-  componentDidMount() {
-    console.log("collapse item: ", this.props)
-  }
 
   render() {
     return (
-      <div className="Collapse-Item">
+      <div className="List-Item">
         <div className="Icon">
           {this.props.icon}
         </div>
@@ -21,4 +18,4 @@ class CollapseItem extends React.Component {
   }
 }
 
-export default CollapseItem
+export default ListItem

@@ -1,7 +1,7 @@
 import React from 'react'
 import './RightSection.css'
 import { ArrowIcon, GearIcon, InfoIcon, WriteIcon, PlusIcon } from '../Components/Icons'
-import { Header, Collapse, CollapseItem } from './../Components'
+import { Header, Collapse, ListItem, PhotoGallery } from './../Components'
 
 
 class RightSection extends React.Component {
@@ -13,12 +13,18 @@ class RightSection extends React.Component {
           <Header title="Tony Stark" subTitle="3 dakika önce aktifti" rightIcons={[<GearIcon />, <GearIcon />, <GearIcon />]} />
         </div>
 
+        {/* <PhotoGallery /> */}
+
         {/* Right Section */}
         <Collapse title="Seçenekler">
-          <CollapseItem icon={<GearIcon />} title="Konusmada Ara" />
-          <CollapseItem icon={<InfoIcon />} title="Takma adları düzenle" />
-          <CollapseItem icon={<WriteIcon />} title="Rengi değiştir" />
-          <CollapseItem icon={<PlusIcon />} title="İfade simgesini değiştir" />
+          <ListItem icon={<GearIcon />} title="Konusmada Ara" />
+          <ListItem icon={<InfoIcon />} title="Takma adları düzenle" />
+          <ListItem icon={<WriteIcon />} title="Rengi değiştir" />
+          <ListItem icon={<PlusIcon />} title="İfade simgesini değiştir" />
+        </Collapse>
+
+        <Collapse title="Galeri">
+          <PhotoGallery />
         </Collapse>
 
       </div>

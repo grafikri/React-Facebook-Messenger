@@ -1,6 +1,4 @@
-
-
-.Collapse-Item{
+.List-Item{
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -8,12 +6,12 @@
     padding-bottom: 5px;
 }
 
-.Collapse-Item > .Icon{
+.List-Item > .Icon{
     flex-grow: 0;
     line-height: 0;
 }
 
-.Collapse-Item > .Title{
+.List-Item > .Title{
     flex-grow: 1;
     margin-left: 10px;
 }

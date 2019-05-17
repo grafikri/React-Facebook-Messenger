@@ -1,0 +1,19 @@
+
+.Photo-Gallery{
+  /* background: red; */
+  height: 200px;
+  overflow: scroll;
+}
+
+.Photo-Gallery > .Gallery-Container{
+  display: flex;
+}
+
+.Photo-Gallery > .Gallery-Container > .Gallery-Item{
+  flex-grow: 1;
+  padding: 5px;
+}
+
+.Photo-Gallery > .Gallery-Container > .Gallery-Item > img{
+  width: 100%
+}

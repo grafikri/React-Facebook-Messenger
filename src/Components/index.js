@@ -1,7 +1,8 @@
 import Collapse from './Collapse'
-import CollapseItem from './CollapseItem'
+import ListItem from './ListItem'
 import Header from './Header'
+import PhotoGallery from './PhotoGallery'
 
-export { Collapse, Header, CollapseItem }
+export { Collapse, Header, ListItem, PhotoGallery }
 
 
