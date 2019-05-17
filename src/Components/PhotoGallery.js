@@ -7,11 +7,11 @@ class PhotoGallery extends React.Component {
 
     let url = "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22"
 
-    let photos = [[url, url, url], [url, url, url], [url, url, url]]
+    let photos = [[url, url, url], [url, url, url], [url, url, url], [url, url, url], [url, url, url], [url, url, url], [url, url, url], [url, url, url], [url, url, url], [url, url, url]]
 
-    let items = photos.map((group) => (
-      <div className="Gallery-Container">
-        {group.map((photoUrl) => (<div className="Gallery-Item"><img src={photoUrl} /></div>))}
+    let items = photos.map((group, index) => (
+      <div key={index} className="Gallery-Container">
+        {group.map((photoUrl, index) => (<div key={index} className="Gallery-Item"><img src={photoUrl} /></div>))}
       </div>
     ))
 

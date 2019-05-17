@@ -5,6 +5,28 @@ import { Header, Collapse, ListItem, PhotoGallery } from './../Components'
 
 
 class RightSection extends React.Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      bodyHeight: 0
+    }
+  }
+
+  updateHeight() {
+    let headerHeight = 51
+    this.setState({ bodyHeight: window.innerHeight - headerHeight })
+  }
+
+  componentDidMount() {
+
+    window.addEventListener("resize", function () {
+      this.updateHeight()
+    }.bind(this))
+
+    this.updateHeight()
+  }
+
   render() {
     return (
       <div className="Right-Section">
@@ -17,18 +39,21 @@ class RightSection extends React.Component {
           <div className="Chat-Area">
             Chat
           </div>
-          <div className="User-Information-Area">
+          <div style={{ "height": this.state.bodyHeight }} className="User-Information-Area">
+            <div className="User-Config">
+              <Collapse title="Seçenekler" open={true}>
+                <ListItem icon={<GearIcon />} title="Konusmada Ara" />
+                <ListItem icon={<InfoIcon />} title="Takma adları düzenle" />
+                <ListItem icon={<WriteIcon />} title="Rengi değiştir" />
+                <ListItem icon={<PlusIcon />} title="İfade simgesini değiştir" />
+              </Collapse>
+            </div>
 
-            <Collapse title="Seçenekler">
-              <ListItem icon={<GearIcon />} title="Konusmada Ara" />
-              <ListItem icon={<InfoIcon />} title="Takma adları düzenle" />
-              <ListItem icon={<WriteIcon />} title="Rengi değiştir" />
-              <ListItem icon={<PlusIcon />} title="İfade simgesini değiştir" />
-            </Collapse>
-
-            <Collapse title="Galeri">
-              <PhotoGallery />
-            </Collapse>
+            <div className="User-Gallery">
+              <Collapse title="Galeri">
+                <PhotoGallery />
+              </Collapse>
+            </div>
 
           </div>
         </div>

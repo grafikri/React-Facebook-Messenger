@@ -30,6 +30,9 @@
     display: none !important;
   }
 
+  .Left-Section > .Left-Section-Header{
+    display: none;
+  }
 
   
   

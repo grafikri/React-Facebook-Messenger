@@ -22,5 +22,15 @@
 .Right-Section > .Content-Area > .User-Information-Area{
   flex-basis: 40%;
   height: 200px;
-  overflow: hidden;
+  overflow: scroll;
 }
+
+.Right-Section > .Content-Area > .User-Information-Area > .User-Config{
+  border-bottom: 1px solid rgba(0, 0, 0, .10);
+}
+
+.Right-Section > .Content-Area > .User-Information-Area > .User-Gallery{
+  border-bottom: 1px solid rgba(0, 0, 0, .10);
+}
+
+
