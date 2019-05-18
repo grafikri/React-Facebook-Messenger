@@ -25,6 +25,7 @@ class LeftSection extends React.Component {
 
     this.state = {
       searchActive: false,
+      userGroupHeight: 0,
     }
   }
 
@@ -36,8 +37,18 @@ class LeftSection extends React.Component {
     this.setState({ searchActive: false })
   }
 
+  updateHeightOfUserGroup() {
+    let headerHeight = 51
+    this.setState({ userGroupHeight: window.innerHeight - headerHeight })
+  }
+
   componentDidMount() {
 
+    window.addEventListener("resize", function () {
+      this.updateHeightOfUserGroup()
+    }.bind(this))
+
+    this.updateHeightOfUserGroup()
   }
 
   render() {
@@ -45,30 +56,39 @@ class LeftSection extends React.Component {
     return (
       <div className="Left-Section">
 
-        <div className="Left-Section-Header">
+        <div className="Left-Section-Tablet-Header">
+          <WriteIcon />
+        </div>
+
+        <div className="Left-Section-Desktop-Header">
           <Header title="Messenger" leftIcons={[<GearIcon />]} rightIcons={[<WriteIcon />]} />
         </div>
 
-        <div className="Search-Input">
-          <PhoneBookUserSeachBox onFocus={this.handleOnFocus} onBlur={this.handleOnBlur} />
+
+        <div style={{ height: this.state.userGroupHeight + "px" }} className="Left-Section-Group">
+          <div className="Search-Input">
+            <PhoneBookUserSeachBox onFocus={this.handleOnFocus} onBlur={this.handleOnBlur} />
+          </div>
+
+          <div className="Tiny-User-List">
+            <TinyChatUserList>
+              {this.props.users.map((user) => <TinyChatUserListItem key={user.id} title={user.name} photo={user.profile_photo} />)}
+            </TinyChatUserList>
+          </div>
+
+          <div className="Phone-Book-User" style={{ display: this.state.searchActive ? "block" : "none" }}>
+            <PhoneBookUserList>
+              {this.props.users.map((user) => <PhoneBookUserListItem key={user.id} profile_photo={user.profile_photo} full_name={user.name} />)}
+            </PhoneBookUserList>
+          </div>
+          <div className="Large-Chat-User" style={{ display: this.state.searchActive ? "none" : "block" }}>
+            <LargeChatUserList>
+              {this.props.users.map((user) => <LargeChatUserListItem key={user.id} profile_photo={user.profile_photo} full_name={user.name} date={user.date} desc={user.desc} />)}
+            </LargeChatUserList>
+          </div>
         </div>
 
-        <div className="Tiny-User-List">
-          <TinyChatUserList>
-            {this.props.users.map((user) => <TinyChatUserListItem key={user.id} title={user.name} photo={user.profile_photo} />)}
-          </TinyChatUserList>
-        </div>
 
-        <div className="Phone-Book-User" style={{ display: this.state.searchActive ? "block" : "none" }}>
-          <PhoneBookUserList>
-            {this.props.users.map((user) => <PhoneBookUserListItem key={user.id} profile_photo={user.profile_photo} full_name={user.name} />)}
-          </PhoneBookUserList>
-        </div>
-        <div className="Large-Chat-User" style={{ display: this.state.searchActive ? "none" : "block" }}>
-          <LargeChatUserList>
-            {this.props.users.map((user) => <LargeChatUserListItem key={user.id} profile_photo={user.profile_photo} full_name={user.name} date={user.date} desc={user.desc} />)}
-          </LargeChatUserList>
-        </div>
       </div>
     )
   }
