@@ -5,6 +5,7 @@ import LeftSection from './../Sections/LeftSection'
 import RightSection from './../Sections/RightSection'
 
 import { MessageTools } from '../Components'
+import { FlatGalleryIcon, FlatStickerIcon, FlatGifIcon, FlatSmileIcon, FlatMicIcon, FlatGameIcon, FlatCameraIcon, FlatLikeIcon } from '../Components/Icons'
 
 
 class Home extends React.Component {
@@ -15,7 +16,7 @@ class Home extends React.Component {
           {/* <LeftSection /> */}
         </div>
         <div className="Right-Panel">
-          <MessageTools />
+          <MessageTools leftIcons={[<FlatGalleryIcon />, <FlatStickerIcon />, <FlatGifIcon />, <FlatSmileIcon />, <FlatMicIcon />, <FlatGameIcon />, <FlatCameraIcon />]} rightIcons={[<FlatLikeIcon />]} />
           {/* <RightSection /> */}
         </div>
       </div>

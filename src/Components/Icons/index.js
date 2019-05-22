@@ -26,3 +26,33 @@ export const FlatGalleryIcon = () => {
   return <BaseIcon xPos={0} yPos={-600} />
 }
 
+export const FlatStickerIcon = () => {
+  // return <BaseIcon xPos={-66} yPos={-600} />
+  return <BaseIcon xPos={-33} yPos={-600} />
+}
+
+export const FlatGifIcon = () => {
+  return <BaseIcon xPos={-99} yPos={-534} />
+}
+
+export const FlatSmileIcon = () => {
+  return <BaseIcon xPos={-33} yPos={-600} />
+}
+
+export const FlatMicIcon = () => {
+  return <BaseIcon xPos={-0} yPos={-534} />
+}
+
+export const FlatGameIcon = () => {
+  // return <BaseIcon xPos={-66} yPos={-666} />
+  return <BaseIcon xPos={0} yPos={-600} />
+}
+
+export const FlatCameraIcon = () => {
+  return <BaseIcon xPos={-33} yPos={-534} />
+}
+
+export const FlatLikeIcon = () => {
+  return <BaseIcon xPos={-33} yPos={-567} />
+}
+
