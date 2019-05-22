@@ -22,3 +22,7 @@ export const InfoIcon = () => {
   return <BaseIcon xPos={-66} yPos={-633} />
 }
 
+export const FlatGalleryIcon = () => {
+  return <BaseIcon xPos={0} yPos={-600} />
+}
+

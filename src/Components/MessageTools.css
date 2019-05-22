@@ -1,0 +1,18 @@
+
+
+.Message-Tools{
+  display: flex;
+  padding: 10px;
+}
+
+.Message-Tools > .Left, .Message-Tools > .Right{
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+}
+
+.Message-Tools > .Right{
+  text-align: right;
+}
+
+

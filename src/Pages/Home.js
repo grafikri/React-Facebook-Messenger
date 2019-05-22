@@ -4,6 +4,7 @@ import React from 'react'
 import LeftSection from './../Sections/LeftSection'
 import RightSection from './../Sections/RightSection'
 
+import { MessageTools } from '../Components'
 
 
 class Home extends React.Component {
@@ -11,10 +12,11 @@ class Home extends React.Component {
     return (
       <div className="Chat-Panel">
         <div className="Left-Panel">
-          <LeftSection />
+          {/* <LeftSection /> */}
         </div>
         <div className="Right-Panel">
-          <RightSection />
+          <MessageTools />
+          {/* <RightSection /> */}
         </div>
       </div>
 
