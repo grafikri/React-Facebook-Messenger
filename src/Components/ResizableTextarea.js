@@ -57,7 +57,7 @@ class ResizableTextarea extends React.Component {
 
   handleEnterKeyTriggered() {
     this.props.handleSubmit(this.state.value.trim())
-    this.setState({ value: '' })
+    this.setState({ value: '', rows: 1 })
   }
 
   render() {
