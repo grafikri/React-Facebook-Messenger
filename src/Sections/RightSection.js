@@ -20,6 +20,10 @@ class RightSection extends React.Component {
     this.setState({ bodyHeight: window.innerHeight - headerHeight })
   }
 
+  handleSubmit(value) {
+    console.log("val: ", value)
+  }
+
   componentDidMount() {
 
     window.addEventListener("resize", function () {
@@ -28,6 +32,8 @@ class RightSection extends React.Component {
 
     this.updateHeight()
   }
+
+
 
   render() {
     return (
@@ -44,7 +50,7 @@ class RightSection extends React.Component {
             </div>
             <div className="Tools">
 
-              <ResizableTextarea />
+              <ResizableTextarea handleSubmit={this.handleSubmit} />
               <MessageTools leftIcons={[<FlatGalleryIcon />, <FlatStickerIcon />, <FlatGifIcon />, <FlatSmileIcon />, <FlatMicIcon />, <FlatGameIcon />, <FlatCameraIcon />]} rightIcons={[<FlatLikeIcon />]} />
             </div>
 

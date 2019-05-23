@@ -5,6 +5,7 @@
  */
 import './ResizableTextarea.css'
 import React from 'react'
+import PropTypes from 'prop-types'
 
 class ResizableTextarea extends React.Component {
   constructor(props) {
@@ -73,7 +74,9 @@ class ResizableTextarea extends React.Component {
   }
 }
 
-
+ResizableTextarea.propTypes = {
+  handleSubmit: PropTypes.func.isRequired
+}
 
 
 export default ResizableTextarea
