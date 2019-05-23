@@ -1,0 +1,28 @@
+.Resizable-Textarea {
+  box-sizing: border-box;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  resize: none;
+  font-size: 20px;
+  line-height: 24px;
+  overflow: auto;
+  height: auto;
+  padding: 8px;
+}
+
+.Resizable-Textarea::-webkit-input-placeholder {
+  color: gainsboro;
+}
+.Resizable-Textarea:-ms-input-placeholder {
+  color: gainsboro;
+}
+.Resizable-Textarea::-ms-input-placeholder {
+  color: gainsboro;
+}
+.Resizable-Textarea::placeholder {
+  color: gainsboro;
+}
+.Resizable-Textarea:focus {
+  outline: none;
+}
