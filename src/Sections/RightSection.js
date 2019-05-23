@@ -1,7 +1,9 @@
 import React from 'react'
 import './RightSection.css'
-import { ArrowIcon, GearIcon, InfoIcon, WriteIcon, PlusIcon } from '../Components/Icons'
-import { Header, Collapse, ListItem, PhotoGallery } from './../Components'
+import { Header, Collapse, ListItem, PhotoGallery, MessageTools, ResizableTextarea } from './../Components'
+
+import { ArrowIcon, GearIcon, InfoIcon, WriteIcon, PlusIcon, FlatGalleryIcon, FlatStickerIcon, FlatGifIcon, FlatSmileIcon, FlatMicIcon, FlatGameIcon, FlatCameraIcon, FlatLikeIcon } from '../Components/Icons'
+
 
 
 class RightSection extends React.Component {
@@ -37,7 +39,15 @@ class RightSection extends React.Component {
 
         <div className="Content-Area">
           <div className="Chat-Area">
-            Chat
+            <div className="Messages">
+              Messages
+            </div>
+            <div className="Tools">
+
+              <ResizableTextarea />
+              <MessageTools leftIcons={[<FlatGalleryIcon />, <FlatStickerIcon />, <FlatGifIcon />, <FlatSmileIcon />, <FlatMicIcon />, <FlatGameIcon />, <FlatCameraIcon />]} rightIcons={[<FlatLikeIcon />]} />
+            </div>
+
           </div>
           <div style={{ "height": this.state.bodyHeight }} className="User-Information-Area">
             <div className="User-Config">

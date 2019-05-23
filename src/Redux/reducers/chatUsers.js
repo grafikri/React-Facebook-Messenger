@@ -17,62 +17,6 @@ const initialState = {
       profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
       date: "02.02.02",
       desc: "Message"
-    },
-    {
-      id: "2",
-      name: "Hulk",
-      profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
-      date: "02.02.02",
-      desc: "Message"
-    },
-    {
-      id: "2",
-      name: "Hulk",
-      profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
-      date: "02.02.02",
-      desc: "Message"
-    },
-    {
-      id: "2",
-      name: "Hulk",
-      profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
-      date: "02.02.02",
-      desc: "Message"
-    },
-    {
-      id: "2",
-      name: "Hulk",
-      profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
-      date: "02.02.02",
-      desc: "Message"
-    },
-    {
-      id: "2",
-      name: "Hulk",
-      profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
-      date: "02.02.02",
-      desc: "Message"
-    },
-    {
-      id: "2",
-      name: "Hulk",
-      profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
-      date: "02.02.02",
-      desc: "Message"
-    },
-    {
-      id: "2",
-      name: "Hulk",
-      profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
-      date: "02.02.02",
-      desc: "Message"
-    },
-    {
-      id: "2",
-      name: "Hulk",
-      profile_photo: "https://fakeimg.pl/200x200/444/?text=Photo&font=lobster%22",
-      date: "02.02.02",
-      desc: "Message"
     }
   ]
 }

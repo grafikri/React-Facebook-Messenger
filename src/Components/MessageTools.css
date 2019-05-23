@@ -1,6 +1,6 @@
 .Message-Tools{
   display: flex;
-  padding: 10px;
+  padding: 6px;
 }
 
 .Message-Tools > .Left, .Message-Tools > .Right{

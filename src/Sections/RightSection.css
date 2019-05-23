@@ -17,6 +17,8 @@
 .Right-Section > .Content-Area > .Chat-Area{
   flex-grow: 1;
   border-right: 1px solid rgba(0, 0, 0, .10);
+  display: flex;
+  flex-direction: column;
 }
 
 .Right-Section > .Content-Area > .User-Information-Area{
@@ -33,4 +35,8 @@
   border-bottom: 1px solid rgba(0, 0, 0, .10);
 }
 
+
+.Right-Section > .Content-Area > .Chat-Area > .Messages{
+  flex-grow: 1;
+}
 
