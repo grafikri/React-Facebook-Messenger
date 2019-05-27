@@ -1,0 +1,29 @@
+@import '../base.sass'
+
+$space-rate: 3.5
+
+.Message-List-Item-Sender
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  
+  .Bubbles 
+    background: red
+    box-sizing: content-box
+    @extend %bubbles-inner-space
+    @extend %bubbles-corner-radius
+    margin:
+      bottom: $row-space / $space-rate
+      top: $row-space / $space-rate
+
+  .Photo
+    text-align: right
+    line-height: 0
+    margin:
+      bottom: $row-space / $space-rate
+      top: $row-space / $space-rate
+    img 
+      max-width: 50%
+      border-radius: 14px
+
+    
