@@ -1,0 +1,45 @@
+@import '../base.sass'
+
+.Large-Chat-User-List-Item
+  display: flex
+  align-items: center
+  background: white
+  cursor: pointer
+  padding:
+    left: $column-space
+    right: $column-space
+    top: $column-space / 1.3
+    bottom: $column-space / 1.3
+
+  .Avatar-Container
+    
+
+  .Content
+    flex-grow: 1
+    margin-left: 15px
+    margin-right: 15px
+
+    .TopContent
+      display: flex
+
+      .Nickname
+        flex-grow: 1
+        flex-basis: 100%
+        font-size: 15px
+        font-weight: 400
+
+    .Date
+      flex-grow: 0
+      font-size: 13px
+      font-weight: 400
+      color: #0006
+
+  .BottomContent
+    display: flex
+    
+    .Desc
+      flex-grow: 1
+      font-size: 13px
+      font-weight: 400
+      color: #999
+      line-height: 1.5

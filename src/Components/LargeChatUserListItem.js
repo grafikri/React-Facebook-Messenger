@@ -1,6 +1,6 @@
 import React from 'react'
 import Avatar from './Avatar'
-import './LargeChatUserListItem.css'
+import './LargeChatUserListItem.sass'
 
 
 class LargeChatUserListItem extends React.Component {
