@@ -1,4 +1,4 @@
-import './Home.css'
+import './Home.sass'
 
 import React from 'react'
 import LeftSection from './../Sections/LeftSection'

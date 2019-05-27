@@ -1,0 +1,31 @@
+@import "../Base.sass"
+
+
+.Chat-Panel 
+  display: flex
+  min-height: 100vh
+  // background: $primary-color
+
+.Left-Panel
+  background: white
+  min-width: 240px
+  max-width: 420px
+  flex-basis: $left-panel-desktop-distance
+  border-right: 1px solid rgba(0, 0, 0, .10)
+
+
+.Right-Panel 
+  /* background: #9999; */
+  flex-grow: 1
+
+
+
+@media (max-width: 640px) 
+  .Left-Panel 
+    flex-basis: $left-panel-tablet-distance
+    width: $left-panel-tablet-distance !important
+    min-width: auto
+    /* width: 10px !important */
+  
+
+
