@@ -8,13 +8,16 @@ $space-rate: 3.5
   align-items: flex-end
   
   .Bubbles 
-    background: red
-    box-sizing: content-box
+    background: $bubble-sender-color
     @extend %bubbles-inner-space
     @extend %bubbles-corner-radius
+    max-width: 50%
     margin:
       bottom: $row-space / $space-rate
       top: $row-space / $space-rate
+    p 
+      color: white
+      font-size: 14px
 
   .Photo
     text-align: right
