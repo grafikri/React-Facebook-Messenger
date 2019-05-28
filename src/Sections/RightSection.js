@@ -6,7 +6,10 @@ import {
 	ListItem,
 	PhotoGallery,
 	MessageTools,
-	ResizableTextarea
+	ResizableTextarea,
+	MessageListItemSender,
+	MessageListItemReceiver,
+	MessageList
 } from "./../Components"
 
 import {
@@ -53,6 +56,10 @@ class RightSection extends React.Component {
 	}
 
 	render() {
+		const url = "https://fakeimg.pl/2000x2000/?text=Photo&font=lobster%22"
+		const text =
+			"dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı"
+
 		return (
 			<div className="Right-Section">
 				<div className="Header-Container">
@@ -65,7 +72,19 @@ class RightSection extends React.Component {
 
 				<div className="Content-Area">
 					<div className="Chat-Area">
-						<div className="Messages">Messages</div>
+						<div className="Messages">
+							<MessageList>
+								<MessageListItemSender photo={url} text={text} />
+								<MessageListItemReceiver
+									profile_photo={url}
+									text={text}
+									photo={url}
+								/>
+								<MessageListItemReceiver profile_photo={url} text={text} />
+								<MessageListItemSender text={text} />
+								<MessageListItemReceiver profile_photo={url} text={text} />
+							</MessageList>
+						</div>
 						<div className="Tools">
 							<ResizableTextarea handleSubmit={this.handleSubmit} />
 							<MessageTools
@@ -105,8 +124,6 @@ class RightSection extends React.Component {
 						</div>
 					</div>
 				</div>
-
-				{/* <PhotoGallery /> */}
 			</div>
 		)
 	}
