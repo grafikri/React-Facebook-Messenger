@@ -41,7 +41,7 @@ class RightSection extends React.Component {
 	}
 
 	handleSubmit(value) {
-		console.log("val: ", value)
+		console.log("val: ", state)
 	}
 
 	componentDidMount() {
