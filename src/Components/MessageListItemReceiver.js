@@ -34,7 +34,7 @@ MessageListItemReceiver.defaultProps = {
 }
 
 MessageListItemReceiver.propTypes = {
-	profil_photo: PropTypes.string.isRequired,
+	profile_photo: PropTypes.string.isRequired,
 	text: PropTypes.string,
 	photo: PropTypes.string
 }

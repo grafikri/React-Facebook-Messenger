@@ -21,7 +21,8 @@
 }
 
 .Right-Section > .Content-Area > .User-Information-Area {
-	flex-basis: 40%;
+	flex-basis: 33%;
+	flex-shrink: 0;
 	height: 200px;
 	overflow: scroll;
 }
@@ -38,4 +39,8 @@
 	flex-grow: 1;
 	height: 200px;
 	overflow: auto;
+}
+
+.Right-Section > .Content-Area > .Chat-Area > .Tools {
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
