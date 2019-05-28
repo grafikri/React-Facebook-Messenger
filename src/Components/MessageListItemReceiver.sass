@@ -1,0 +1,36 @@
+@import '../base.sass'
+
+.Message-List-Item-Receiver
+  display: flex
+  flex-direction: row
+  align-items: flex-end
+  .Avatar
+    margin-right: 10px
+
+  .Content
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+  
+    .Bubbles 
+      background: $bubble-receiver-color
+      @extend %bubble-inner-space
+      @extend %bubble-corner-radius
+      max-width: $bubble-width-rate
+      margin:
+        bottom: $row-space / $chat-items-horizontal-space-rate
+        top: $row-space / $chat-items-horizontal-space-rate
+      p 
+        color: $primary-text-color
+        font-size: 14px
+
+    .Photo
+      line-height: 0
+      margin:
+        bottom: $row-space / $chat-items-horizontal-space-rate
+        top: $row-space / $chat-items-horizontal-space-rate
+      img 
+        max-width: 50%
+        border-radius: 14px
+
+    
