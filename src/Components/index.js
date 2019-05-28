@@ -5,6 +5,8 @@ import PhotoGallery from "./PhotoGallery"
 import MessageTools from "./MessageTools"
 import ResizableTextarea from "./ResizableTextarea"
 import MessageListItemSender from "./MessageListItemSender"
+import MessageListItemReceiver from "./MessageListItemReceiver"
+import Avatar from "./Avatar"
 
 export {
 	Collapse,
@@ -13,5 +15,7 @@ export {
 	PhotoGallery,
 	MessageTools,
 	ResizableTextarea,
-	MessageListItemSender
+	MessageListItemSender,
+	MessageListItemReceiver,
+	Avatar
 }

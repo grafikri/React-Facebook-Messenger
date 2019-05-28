@@ -1,6 +1,7 @@
 import "./MessageListItemSender.sass"
 
 import React from "react"
+import PropTypes from "prop-types"
 
 class MessageListItemSender extends React.Component {
 	render() {
@@ -8,25 +9,29 @@ class MessageListItemSender extends React.Component {
 
 		return (
 			<div className="Message-List-Item-Sender">
-				<div className="Bubbles">
-					<p>
-						dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem
-						Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı
-						oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden
-						beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz
-						yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek
-						değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum
-						pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın
-						zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü
-						yayıncılık yazılımları ile popüler olmuştur.
-					</p>
-				</div>
-				<div className="Photo">
-					<img src={url} alt="" />
-				</div>
+				{this.props.photo != "" && (
+					<div className="Photo">
+						<img src={this.props.photo} alt="" />
+					</div>
+				)}
+				{this.props.text != "" && (
+					<div className="Bubbles">
+						<p>{this.props.text}</p>
+					</div>
+				)}
 			</div>
 		)
 	}
+}
+
+MessageListItemSender.defaultProps = {
+	text: "",
+	photo: ""
+}
+
+MessageListItemSender.propTypes = {
+	text: PropTypes.string,
+	photo: PropTypes.string
 }
 
 export default MessageListItemSender

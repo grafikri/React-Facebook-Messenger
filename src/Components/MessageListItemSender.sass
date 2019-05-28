@@ -1,6 +1,6 @@
 @import '../base.sass'
 
-$space-rate: 3.5
+
 
 .Message-List-Item-Sender
   display: flex
@@ -9,12 +9,12 @@ $space-rate: 3.5
   
   .Bubbles 
     background: $bubble-sender-color
-    @extend %bubbles-inner-space
-    @extend %bubbles-corner-radius
-    max-width: 50%
+    @extend %bubble-inner-space
+    @extend %bubble-corner-radius
+    max-width: $bubble-width-rate
     margin:
-      bottom: $row-space / $space-rate
-      top: $row-space / $space-rate
+      bottom: $row-space / $chat-items-horizontal-space-rate
+      top: $row-space / $chat-items-horizontal-space-rate
     p 
       color: white
       font-size: 14px
@@ -23,8 +23,8 @@ $space-rate: 3.5
     text-align: right
     line-height: 0
     margin:
-      bottom: $row-space / $space-rate
-      top: $row-space / $space-rate
+      bottom: $row-space / $chat-items-horizontal-space-rate
+      top: $row-space / $chat-items-horizontal-space-rate
     img 
       max-width: 50%
       border-radius: 14px
