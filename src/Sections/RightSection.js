@@ -1,4 +1,6 @@
 import React from "react"
+import { connect } from "react-redux"
+import { addNewMessage } from "../Redux/actions"
 import "./RightSection.css"
 import {
 	Header,
@@ -30,6 +32,8 @@ import {
 class RightSection extends React.Component {
 	constructor(props) {
 		super(props)
+
+		this.handleSubmit = this.handleSubmit.bind(this)
 		this.state = {
 			bodyHeight: 0
 		}
@@ -41,10 +45,12 @@ class RightSection extends React.Component {
 	}
 
 	handleSubmit(value) {
-		console.log("val: ", state)
+		this.props.addNewMessage(value)
 	}
 
 	componentDidMount() {
+		console.log("did: ", this)
+
 		window.addEventListener(
 			"resize",
 			function() {
@@ -74,15 +80,17 @@ class RightSection extends React.Component {
 					<div className="Chat-Area">
 						<div className="Messages">
 							<MessageList>
-								<MessageListItemSender photo={url} text={text} />
-								<MessageListItemReceiver
-									profile_photo={url}
-									text={text}
-									photo={url}
-								/>
-								<MessageListItemReceiver profile_photo={url} text={text} />
-								<MessageListItemSender text={text} />
-								<MessageListItemReceiver profile_photo={url} text={text} />
+								{this.props.messages.map((message, index) =>
+									message.user_id == this.props.auth.id ? (
+										<MessageListItemSender key={index} text={message.text} />
+									) : (
+										<MessageListItemReceiver
+											key={index}
+											profile_photo={this.props.user.profile_photo}
+											text={message.text}
+										/>
+									)
+								)}
 							</MessageList>
 						</div>
 						<div className="Tools">
@@ -129,4 +137,17 @@ class RightSection extends React.Component {
 	}
 }
 
-export default RightSection
+const mapStateToProps = state => ({
+	messages: state.messages.con_1,
+	auth: state.auth,
+	user: state.user
+})
+
+const mapDispatchToProps = dispatch => ({
+	addNewMessage: text => dispatch(addNewMessage("con_1", text))
+})
+
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(RightSection)
