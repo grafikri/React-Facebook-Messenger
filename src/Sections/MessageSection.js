@@ -1,5 +1,7 @@
 import React from "react"
-import "./RightSection.css"
+import { connect } from "react-redux"
+import { addNewMessage } from "../Redux/actions"
+import "./MessageSection.sass"
 import {
 	Header,
 	Collapse,
@@ -10,7 +12,7 @@ import {
 	MessageListItemSender,
 	MessageListItemReceiver,
 	MessageList
-} from "./../Components"
+} from "../Components"
 
 import {
 	GearIcon,
@@ -27,9 +29,10 @@ import {
 	FlatLikeIcon
 } from "../Components/Icons"
 
-class RightSection extends React.Component {
+class MessageSection extends React.Component {
 	constructor(props) {
 		super(props)
+
 		this.state = {
 			bodyHeight: 0
 		}
@@ -38,10 +41,6 @@ class RightSection extends React.Component {
 	updateHeight() {
 		let headerHeight = 51
 		this.setState({ bodyHeight: window.innerHeight - headerHeight })
-	}
-
-	handleSubmit(value) {
-		console.log("val: ", value)
 	}
 
 	componentDidMount() {
@@ -61,11 +60,11 @@ class RightSection extends React.Component {
 			"dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı"
 
 		return (
-			<div className="Right-Section">
+			<div className="Message-Section">
 				<div className="Header-Container">
 					<Header
-						title="Tony Stark"
-						subTitle="3 dakika önce aktifti"
+						title={this.props.user.name}
+						subTitle={this.props.user.last_online}
 						rightIcons={[<GearIcon />, <GearIcon />, <GearIcon />]}
 					/>
 				</div>
@@ -74,19 +73,25 @@ class RightSection extends React.Component {
 					<div className="Chat-Area">
 						<div className="Messages">
 							<MessageList>
-								<MessageListItemSender photo={url} text={text} />
-								<MessageListItemReceiver
-									profile_photo={url}
-									text={text}
-									photo={url}
-								/>
-								<MessageListItemReceiver profile_photo={url} text={text} />
-								<MessageListItemSender text={text} />
-								<MessageListItemReceiver profile_photo={url} text={text} />
+								{this.props.messages.map((message, index) =>
+									message.user_id == this.props.auth.id ? (
+										<MessageListItemSender key={index} text={message.text} />
+									) : (
+										<MessageListItemReceiver
+											key={index}
+											profile_photo={this.props.user.profile_photo}
+											text={message.text}
+										/>
+									)
+								)}
 							</MessageList>
 						</div>
 						<div className="Tools">
-							<ResizableTextarea handleSubmit={this.handleSubmit} />
+							<ResizableTextarea
+								handleSubmit={value =>
+									this.props.addNewMessage(this.props.conversation_id, value)
+								}
+							/>
 							<MessageTools
 								leftIcons={[
 									<FlatGalleryIcon />,
@@ -129,4 +134,19 @@ class RightSection extends React.Component {
 	}
 }
 
-export default RightSection
+const mapStateToProps = state => ({
+	messages: state.messages[state.conversationStatus.active_conversation_id],
+	auth: state.auth,
+	user: state.user,
+	conversation_id: state.conversationStatus.active_conversation_id
+})
+
+const mapDispatchToProps = dispatch => ({
+	addNewMessage: (conversation_id, text) =>
+		dispatch(addNewMessage(conversation_id, text))
+})
+
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(MessageSection)
