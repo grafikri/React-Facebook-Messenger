@@ -1,0 +1,43 @@
+@import '../base.sass'
+
+.Message-Section
+	height: 100%
+	display: flex
+	flex-direction: column
+
+  .Header-Container
+	  border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+
+  .Content-Area
+    display: flex
+    flex-grow: 1
+
+    .Chat-Area 
+      flex-grow: 1
+      border-right: 1px solid rgba(0, 0, 0, 0.1)
+      display: flex
+      flex-direction: column
+
+      .Messages 
+        flex-grow: 1
+        height: 200px
+        overflow: auto
+      .Tools 
+	      border-top: 1px solid rgba(0, 0, 0, 0.1)
+
+
+    .User-Information-Area 
+      flex-basis: 33%
+      flex-shrink: 0
+      height: 200px
+      overflow: scroll
+
+      .User-Config 
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+
+    .User-Gallery 
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+  
+       
+
+

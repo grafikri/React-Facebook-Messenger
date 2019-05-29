@@ -1,22 +1,31 @@
 import "./Home.sass"
-
+import { connect } from "react-redux"
 import React from "react"
 import LeftSection from "./../Sections/LeftSection"
-import RightSection from "./../Sections/RightSection"
+import MessageSection from "../Sections/MessageSection"
 
 class Home extends React.Component {
 	render() {
+		console.log("Home: ", this.props)
 		return (
 			<div className="Chat-Panel">
 				<div className="Left-Panel">
 					<LeftSection />
 				</div>
 				<div className="Right-Panel">
-					<RightSection />
+					{this.props.conversation_id == null ? (
+						"Empty Screen"
+					) : (
+						<MessageSection />
+					)}
 				</div>
 			</div>
 		)
 	}
 }
 
-export default Home
+const mapStateToProps = state => ({
+	conversation_id: state.conversationStatus.active_conversation_id
+})
+
+export default connect(mapStateToProps)(Home)
