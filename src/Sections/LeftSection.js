@@ -1,6 +1,6 @@
 import React from "react"
 import "./LeftSection.css"
-import { fetchConversation } from "../Redux/actions"
+import { fetchConversation, updateUser } from "../Redux/actions"
 import { WriteIcon, GearIcon } from "../Components/Icons"
 import LargeChatUserList from "./../Components/LargeChatUserList"
 import LargeChatUserListItem from "./../Components/LargeChatUserListItem"
@@ -112,8 +112,9 @@ class LeftSection extends React.Component {
 							{this.props.users.map(user => (
 								<LargeChatUserListItem
 									handleOnClick={id => {
-										let user = this.props.users.filter(user => user.id == id)
-										this.props.fetchConversation(user[0].conversation_id)
+										let user = this.props.users.filter(user => user.id == id)[0]
+										this.props.fetchConversation(user.conversation_id)
+										this.props.updateUser(user)
 									}}
 									key={user.id}
 									id={user.id}
@@ -138,7 +139,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
 	fetchConversation: conversation_id =>
-		dispatch(fetchConversation(conversation_id))
+		dispatch(fetchConversation(conversation_id)),
+	updateUser: user => dispatch(updateUser(user))
 })
 
 export default connect(

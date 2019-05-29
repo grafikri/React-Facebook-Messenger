@@ -65,8 +65,8 @@ class RightSection extends React.Component {
 			<div className="Right-Section">
 				<div className="Header-Container">
 					<Header
-						title="Tony Stark"
-						subTitle="3 dakika önce aktifti"
+						title={this.props.user.name}
+						subTitle={this.props.user.last_online}
 						rightIcons={[<GearIcon />, <GearIcon />, <GearIcon />]}
 					/>
 				</div>

@@ -1,7 +1,8 @@
 import {
 	TOGGLE_PHONE_USER_SEARCH,
 	ADD_NEW_MESSAGE,
-	FETCH_CONVERSATION
+	FETCH_CONVERSATION,
+	UPDATE_USER
 } from "./actionsTypes"
 
 export const tooglePhoneUserSearch = status => ({
@@ -17,4 +18,9 @@ export const addNewMessage = (conversation_id, text) => ({
 export const fetchConversation = conversation_id => ({
 	type: FETCH_CONVERSATION,
 	id: conversation_id
+})
+
+export const updateUser = user => ({
+	type: UPDATE_USER,
+	user: user
 })
