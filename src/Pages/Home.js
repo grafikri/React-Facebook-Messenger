@@ -6,7 +6,6 @@ import MessageSection from "../Sections/MessageSection"
 
 class Home extends React.Component {
 	render() {
-		console.log("Home: ", this.props)
 		return (
 			<div className="Chat-Panel">
 				<div className="Left-Panel">
