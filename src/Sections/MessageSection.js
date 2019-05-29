@@ -1,7 +1,7 @@
 import React from "react"
 import { connect } from "react-redux"
 import { addNewMessage } from "../Redux/actions"
-import "./RightSection.css"
+import "./MessageSection.sass"
 import {
 	Header,
 	Collapse,
@@ -12,7 +12,7 @@ import {
 	MessageListItemSender,
 	MessageListItemReceiver,
 	MessageList
-} from "./../Components"
+} from "../Components"
 
 import {
 	GearIcon,
@@ -29,7 +29,7 @@ import {
 	FlatLikeIcon
 } from "../Components/Icons"
 
-class RightSection extends React.Component {
+class MessageSection extends React.Component {
 	constructor(props) {
 		super(props)
 
@@ -44,8 +44,6 @@ class RightSection extends React.Component {
 	}
 
 	componentDidMount() {
-		console.log("did: ", this)
-
 		window.addEventListener(
 			"resize",
 			function() {
@@ -62,7 +60,7 @@ class RightSection extends React.Component {
 			"dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı"
 
 		return (
-			<div className="Right-Section">
+			<div className="Message-Section">
 				<div className="Header-Container">
 					<Header
 						title={this.props.user.name}
@@ -151,4 +149,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(RightSection)
+)(MessageSection)
