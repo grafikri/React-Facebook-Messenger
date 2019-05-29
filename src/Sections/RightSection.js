@@ -33,7 +33,6 @@ class RightSection extends React.Component {
 	constructor(props) {
 		super(props)
 
-		this.handleSubmit = this.handleSubmit.bind(this)
 		this.state = {
 			bodyHeight: 0
 		}
@@ -42,10 +41,6 @@ class RightSection extends React.Component {
 	updateHeight() {
 		let headerHeight = 51
 		this.setState({ bodyHeight: window.innerHeight - headerHeight })
-	}
-
-	handleSubmit(value) {
-		this.props.addNewMessage(value)
 	}
 
 	componentDidMount() {
@@ -94,7 +89,11 @@ class RightSection extends React.Component {
 							</MessageList>
 						</div>
 						<div className="Tools">
-							<ResizableTextarea handleSubmit={this.handleSubmit} />
+							<ResizableTextarea
+								handleSubmit={value =>
+									this.props.addNewMessage(this.props.conversation_id, value)
+								}
+							/>
 							<MessageTools
 								leftIcons={[
 									<FlatGalleryIcon />,
@@ -138,13 +137,15 @@ class RightSection extends React.Component {
 }
 
 const mapStateToProps = state => ({
-	messages: state.messages.con_1,
+	messages: state.messages[state.conversationStatus.active_conversation_id],
 	auth: state.auth,
-	user: state.user
+	user: state.user,
+	conversation_id: state.conversationStatus.active_conversation_id
 })
 
 const mapDispatchToProps = dispatch => ({
-	addNewMessage: text => dispatch(addNewMessage("con_1", text))
+	addNewMessage: (conversation_id, text) =>
+		dispatch(addNewMessage(conversation_id, text))
 })
 
 export default connect(

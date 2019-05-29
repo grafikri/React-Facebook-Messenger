@@ -1,5 +1,4 @@
-import { ADD_NEW_MESSAGE } from "../actionsTypes"
-import _ from "lodash"
+import { ADD_NEW_MESSAGE, FETCH_CONVERSATION } from "../actionsTypes"
 
 const initialState = {
 	con_1: [
@@ -21,9 +20,14 @@ const initialState = {
 	],
 	con_2: [
 		{
-			text: "Merhaba",
+			text: "Merhaba Ben Tony",
 			date: "dün",
-			user_id: "2222"
+			user_id: "3333"
+		},
+		{
+			text: "Merhaba Bende Serhan",
+			date: "dün",
+			user_id: "1111"
 		}
 	]
 }
@@ -42,7 +46,6 @@ const messages = (state = initialState, action) => {
 					}
 				]
 			}
-
 		default:
 			return state
 	}
