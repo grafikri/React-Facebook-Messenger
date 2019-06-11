@@ -14,5 +14,4 @@ $ npm start # serve at localhost:3000
 - Chat panel
 - Scroll component
 - Redux integration
-- SASS integration
 - Theme support
